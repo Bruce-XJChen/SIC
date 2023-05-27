@@ -1,0 +1,56 @@
+# setup
+setup: clustering
+
+# Loss
+criterion: clustering
+criterion_kwargs:
+   entropy_weight: 5.0  # 5.0
+   weight_t: 0.05
+   alpha: 0.1
+
+# Weight update
+update_cluster_head_only: True
+num_heads: 1
+
+# Model
+backbone: ViT-B/32
+
+# Dataset
+train_db_name: cifar-20
+val_db_name: cifar-20
+num_classes: 20
+num_neighbors: 20
+
+# Transformations
+augmentation_strategy: ours
+augmentation_kwargs:
+   crop_size: 32
+   normalize:
+      mean: [0.4914, 0.4822, 0.4465]
+      std: [0.2023, 0.1994, 0.2010]
+   num_strong_augs: 4
+   cutout_kwargs:
+     n_holes: 1
+     length: 16
+     random: True
+
+transformation_kwargs:
+   crop_size: 32
+   normalize:
+      mean: [0.4914, 0.4822, 0.4465]
+      std: [0.2023, 0.1994, 0.2010]
+
+# Hyperparameters
+optimizer_image:
+   optimizer: adam
+   optimizer_kwargs:
+      lr: 0.0001
+      weight_decay: 0.0001
+   scheduler: constant
+
+lr_decay_rate: 0.001
+epochs: 100
+batch_size: 128 #128
+num_workers: 8 #8
+
+
