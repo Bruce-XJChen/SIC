@@ -38,11 +38,18 @@ CIFAR-10, CIFAR-100, STL-10 will be automatically downloaded by Pytorch. Tiny-Im
 
 If you find SIC useful in your research, please cite:
 ```
+
 @inproceedings{cai2023semantic,
-  title={Semantic-Enhanced Image Clustering},
-  author={Cai, Shaotian and Qiu, Liping and Chen, Xiaojun and Zhang, Qin and Chen, Longteng},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year = {2023}
+author       = {Shaotian Cai and
+          Liping Qiu and
+          Xiaojun Chen and
+          Qin Zhang and
+          Longteng Chen},
+title        = {Semantic-Enhanced Image Clustering},
+booktitle    = {Proceedings of the AAAI Conference on Artificial Intelligence 2023},
+pages        = {6869--6878},
+year         = {2023}
 }
+
 ```
 
